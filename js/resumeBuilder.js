@@ -3,7 +3,7 @@ var role = "Web Developer";
 var bio = {
   "name": "Suresh Swamy",
   "role": "Web Developer",
-  "contact": {"email":"sureshnswamy@gmail.com",
+  "contacts": {"email":"sureshnswamy@gmail.com",
               "mobile": "022222222",
               "location": "Lower Hutt",
               "twitter":"@kiwiyan",
@@ -17,11 +17,11 @@ var bio = {
 var formattedName= HTMLheaderName.replace("%data%",name);
 var formattedRole= HTMLheaderRole.replace("%data%", role);
 var formattedPic= HTMLbioPic.replace('%data%',bio.pic)
-var formattedEmail = HTMLemail.replace('%data%', bio.contact.email);
-var formattedMobile = HTMLmobile.replace('%data%', bio.contact.mobile);
-var formattedTwitter = HTMLtwitter.replace('%data%',bio.contact.twitter);
-var formattedgithub = HTMLgithub.replace('%data%',bio.contact.github);
-var formattedLocation = HTMLlocation.replace('%data%', bio.contact.location);
+var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
+var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
+var formattedTwitter = HTMLtwitter.replace('%data%',bio.contacts.twitter);
+var formattedgithub = HTMLgithub.replace('%data%',bio.contacts.github);
+var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 
 var formattedPic = HTMLbioPic.replace('%data%', bio.pic);
 var formattedMessage = HTMLwelcomeMsg.replace('%data%', bio.message);
@@ -61,6 +61,13 @@ var work = {
   "description":"High-pressure science and technology research leader. Setup experimental \
   facility for high pressure measurements in materials at \
   low-temperature, high-magnetic field."
+  },
+
+ { "employer": "CSEC University of Edinburgh, UK",
+  "title":  "Research Associate",
+  "location": "Edinburgh, UK", 
+  "years": "Feb 2008 - Jul 2010",
+  "description":"Extreme conditions user facility development."
   }
 
 ]
@@ -191,3 +198,5 @@ var projects = {
   }
 
 displayProjects();
+
+$("#mapDiv").append(googleMap);
