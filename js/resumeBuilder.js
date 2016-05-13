@@ -4,13 +4,13 @@ var bio = {
   "name": "Suresh Swamy",
   "role": "Web Developer",
   "contacts": {"email":"sureshnswamy@gmail.com",
-              "mobile": "022222222",
+              "mobile": "0226285763",
               "location": "Lower Hutt",
               "twitter":"@kiwiyan",
               "github": "sureshnswamy"
             },
   "pic": "images/Suresh09.png",
-  "skills" : ["CSS", "HTML", "Javascript", "Teaching", "Project Management"],
+  "skills" : ["Node.js", "Javascript", "CSS", "HTML", "Git",  "Project Management"],
   "message": "Welcome to the awesome resume you have been looking for"
 };
 
@@ -78,6 +78,12 @@ var work = {
 var education ={
   "schools": [
   {
+  "name": "Enspiral Developer Academy",
+  "degree": "Node.js with Javascript",
+  "years": "Nov 2015-April 2016",
+  "location": "Wellington, New Zealand"
+  },
+  {
   "name": "Mumbai University",
   "degree": "Ph.D [Shockwave Physics]",
   "years": "1998-2002",
@@ -100,7 +106,7 @@ var education ={
     "school":"Codecademy",
     "dates": "Nov 2015",
     "url": "https://www.codecademy.com/"
-    },
+    }
   ]
 
 };
@@ -150,13 +156,26 @@ $('.education-entry:last').append(HTMLonlineClasses);
     var formattedonlineDates = HTMLonlineDates.replace('%data%', education.onlineCourse[online].dates);
    // $('.education-entry:last').append();
 
-    var formattedonlineURL = HTMLonlineURL.replace('%data%', education.onlineCourse[online].url);
+    var formattedonlineURL = HTMLonlineURL.replace('%url%', education.onlineCourse[online].url);
+
+    // var formattedonlineURLTXT = HTMLonlineURL.replace('%data%', education.onlineCourse[online].school);
+
     $('.education-entry:last').append(formattedonlineTitle,formattedonlineSchool, formattedonlineDates,formattedonlineURL);
   };
 
 
 var projects = {
   'list': [
+          {
+            'title': 'Comms Companion',
+            "dates": 'April 2016',
+            'description': 'Final group project. This application was developed with three collaborators. This application is aimed for kids with Autism syndrome to help them communicate with their parents/gaurdians.\
+             This was built using React for frontend with express for the server along with SQLite for database with CSS styling and a SVG for timer animation. )',
+           'projectImage':'images/cryostat.jpg'
+          },
+
+
+
           {
             'title': 'Large sample volume Cryostat for electrical and optical properties measurements',
             "dates": 'August 2014',
